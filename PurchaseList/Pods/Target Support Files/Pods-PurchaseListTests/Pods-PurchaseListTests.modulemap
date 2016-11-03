@@ -1,0 +1,6 @@
+framework module Pods_PurchaseListTests {
+  umbrella header "Pods-PurchaseListTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
