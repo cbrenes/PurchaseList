@@ -40,11 +40,17 @@ class PurchaseListViewController: UIViewController, PurchaseListViewControllerIn
         PurchaseListConfigurator.sharedInstance.configure(viewController: self)
     }
     
+    
+    
     // MARK: View lifecycle
     
     override func viewDidLoad(){
         super.viewDidLoad()
         title = "Purchase List"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         fetchItems()
     }
     

@@ -55,6 +55,13 @@ class AddItemRouter: AddItemRouterInput{
         // someWhereViewController.output.name = viewController.output.name
     }
     
+    func goToBackView(){
+        DispatchQueue.main.async {
+            _ = self.viewController.navigationController?.popViewController(animated: true)
+        }
+        
+    }
+    
     
     
     

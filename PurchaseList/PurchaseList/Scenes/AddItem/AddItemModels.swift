@@ -11,14 +11,28 @@
 
 import UIKit
 
+enum AddItemResult {
+    case OneOrMoreParametersAreNil
+    case QuantityIsnAValidNumber
+    case NoErrors
+    case ErrorSavingItem
+}
+
+
 struct AddItem{
-    struct Request{
-    }
     
-    struct Response{
-    }
-    
-    struct ViewModel{
+    struct Insert {
+        struct Request{
+            var name: String?
+            var quantity: String?
+        }
+        struct Response{
+            var result: AddItemResult
+        }
+        
+        struct ViewModel{
+            var alert: UIAlertController
+        }
     }
 }
 

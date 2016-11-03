@@ -23,11 +23,11 @@ class ItemsSingleton: NSObject{
 
 class ItemMemoryStore: ItemStoreProtocol {
     
-    var items = ItemsSingleton.sharedInstance.items
-    
+
+    var items: [Item] =  ItemsSingleton.sharedInstance.items
     
     func fetchAllItems(completionHandler:  (_ itemsArray: [Item], _ error: ItemStoreError?) -> Void){
-        completionHandler(items, nil)
+        completionHandler(ItemsSingleton.sharedInstance.items, nil)
        
     }
     
@@ -39,6 +39,7 @@ class ItemMemoryStore: ItemStoreProtocol {
     func deleteItem(id: NSNumber, completionHandler: (_ error: ItemStoreError?) -> Void){
         if let index = getObjectIndex(id: id){
             items.remove(at: index)
+            ItemsSingleton.sharedInstance.items = items
             completionHandler(nil)
         }
         else{
@@ -47,7 +48,8 @@ class ItemMemoryStore: ItemStoreProtocol {
     }
     
     func createItem(item: Item, completionHandler:  (_ error: ItemStoreError?) -> Void){
-        items.append(item)
+        ItemsSingleton.sharedInstance.items.append(item)
+        items = ItemsSingleton.sharedInstance.items
         completionHandler(nil)
     }
     
@@ -55,6 +57,7 @@ class ItemMemoryStore: ItemStoreProtocol {
     func updateItem(item: Item, completionHandler: (_ error: ItemStoreError?) -> Void){
         if let index = getObjectIndex(id: item.id){
             items[index] = item
+            ItemsSingleton.sharedInstance.items = items
             completionHandler(nil)
         }
         else{

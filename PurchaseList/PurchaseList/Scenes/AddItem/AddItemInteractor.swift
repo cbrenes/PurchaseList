@@ -12,28 +12,34 @@
 import UIKit
 
 protocol AddItemInteractorInput{
-    func doSomething(request: AddItem.Request)
+    func insertItem(request: AddItem.Insert.Request)
 }
 
 protocol AddItemInteractorOutput{
-    func presentSomething(response: AddItem.Response)
+    func presentInsertItem(response: AddItem.Insert.Response)
 }
 
 class AddItemInteractor: AddItemInteractorInput{
     var output: AddItemInteractorOutput!
-    var worker: AddItemWorker!
+    var worker = ItemWorker(itemStore: ItemMemoryStore())
     
     // MARK: Business logic
     
-    func doSomething(request: AddItem.Request){
-        // NOTE: Create some Worker to do the work
-        
-        worker = AddItemWorker()
-        worker.doSomeWork()
-        
-        // NOTE: Pass the result to the Presenter
-        
-        let response = AddItem.Response()
-        output.presentSomething(response: response)
+    func insertItem(request: AddItem.Insert.Request){
+        let addItemWorker = AddItemWorker()
+        let response = addItemWorker.createResponse(name: request.name, quantity: request.quantity)
+        if response.0.result == .NoErrors{
+            worker.createItem(item: response.1!, completionHandler: {(error) in
+                if error == nil{
+                    output.presentInsertItem(response: response.0)
+                }
+                else{
+                    output.presentInsertItem(response: AddItem.Insert.Response(result: .ErrorSavingItem))
+                }
+            })
+        }
+        else{
+            output.presentInsertItem(response: response.0)
+        }
     }
 }

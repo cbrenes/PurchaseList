@@ -12,11 +12,12 @@
 import UIKit
 
 protocol AddItemViewControllerInput{
-    func displaySomething(viewModel: AddItem.ViewModel)
+    func displayInsertItemError(viewModel: AddItem.Insert.ViewModel)
+    func displayInsertItemSuccessfully(viewModel: AddItem.Insert.ViewModel)
 }
 
 protocol AddItemViewControllerOutput{
-    func doSomething(request: AddItem.Request)
+    func insertItem(request: AddItem.Insert.Request)
 }
 
 class AddItemViewController: UIViewController, AddItemViewControllerInput{
@@ -41,23 +42,37 @@ class AddItemViewController: UIViewController, AddItemViewControllerInput{
     override func viewDidLoad(){
         super.viewDidLoad()
         title = "Add Item"
-        doSomethingOnLoad()
+        addInsertBarButtonItemInTheNavigationController()
     }
+    
+    func addInsertBarButtonItemInTheNavigationController(){
+        let insertButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.save, target: self, action: #selector(insertItem))
+        navigationItem.rightBarButtonItem = insertButton
+    }
+    
+   
     
     // MARK: Event handling
-    
-    func doSomethingOnLoad(){
-        // NOTE: Ask the Interactor to do some work
-        
-        let request = AddItem.Request()
-        output.doSomething(request: request)
+    func insertItem(){
+        let request = AddItem.Insert.Request(name: nameTextField.text, quantity: quantityTextField.text)
+        output.insertItem(request: request)
     }
+  
     
     // MARK: Display logic
     
-    func displaySomething(viewModel: AddItem.ViewModel){
-        // NOTE: Display the result from the Presenter
+    
+    func displayInsertItemError(viewModel: AddItem.Insert.ViewModel){
+        present(viewModel.alert, animated: true)
+    }
+    
+    func displayInsertItemSuccessfully(viewModel: AddItem.Insert.ViewModel){
+        viewModel.alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {(alert) in
+            self.router.goToBackView()
+        }))
+       
         
-        // nameTextField.text = viewModel.name
+         self.present(viewModel.alert, animated: true)
+        
     }
 }

@@ -27,34 +27,7 @@ class ItemWorkerTests: XCTestCase {
         itemWorker = ItemWorker(itemStore: ItemMemoryStore())
     }
     
-    func testFetchAll() {
-        let itemWorker = ItemWorker(itemStore: ItemMemoryStore())
-        let asyncExpectation = expectation(description: "fetchAllItems")
-        var itemsCount = 0
-        itemWorker.fetchAllItems(completionHandler: {(items) in
-            itemsCount = items.count
-             asyncExpectation.fulfill()
-        })
-        self.waitForExpectations(timeout: 3.0, handler: {(error) in
-           XCTAssertEqual(8, itemsCount)
-        })
-    }
-    
-    
-    func testInsert(){
-        let asyncExpectation = expectation(description: "createItem")
-        let newItem = Item(name: "test", quantity: NSNumber(value: 10), id: NSNumber(value: 9))
-        var itemsCount = 0
-        itemWorker.createItem(item: newItem, completionHandler: {(error) in
-            itemWorker.fetchAllItems(completionHandler: {(items) in
-                itemsCount = items.count
-                asyncExpectation.fulfill()
-            })
-        })
-        self.waitForExpectations(timeout: 3.0, handler: {(error) in
-            XCTAssertEqual(9, itemsCount)
-        })
-    }
+
     
     
     func testDelete(){

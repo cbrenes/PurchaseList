@@ -16,6 +16,12 @@
 		7842F3121DCA0FF600ECDC50 /* ItemMemoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7842F30A1DC9299A00ECDC50 /* ItemMemoryStore.swift */; };
 		7842F3131DCA0FF900ECDC50 /* ItemWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781946371DC820CD00CA0889 /* ItemWorker.swift */; };
 		7842F3151DCA139300ECDC50 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7819462E1DC81DDC00CA0889 /* Item.swift */; };
+		789DF2251DCBC6340081115D /* AddItemInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DF2211DCBC6340081115D /* AddItemInteractorTests.swift */; };
+		789DF2261DCBC6340081115D /* AddItemPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DF2221DCBC6340081115D /* AddItemPresenterTests.swift */; };
+		789DF2271DCBC6340081115D /* AddItemViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DF2231DCBC6340081115D /* AddItemViewControllerTests.swift */; };
+		789DF2281DCBC6340081115D /* AddItemWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DF2241DCBC6340081115D /* AddItemWorkerTests.swift */; };
+		789DF22A1DCBD2070081115D /* AddItemWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DF2291DCBD2070081115D /* AddItemWorker.swift */; };
+		789DF22B1DCBD4430081115D /* AddItemWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DF2291DCBD2070081115D /* AddItemWorker.swift */; };
 		78D9FC5E1DCAE8BB005E6D2C /* AddItemConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D9FC571DCAE8BB005E6D2C /* AddItemConfigurator.swift */; };
 		78D9FC5F1DCAE8BB005E6D2C /* AddItemConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D9FC571DCAE8BB005E6D2C /* AddItemConfigurator.swift */; };
 		78D9FC601DCAE8BB005E6D2C /* AddItemInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D9FC581DCAE8BB005E6D2C /* AddItemInteractor.swift */; };
@@ -28,8 +34,6 @@
 		78D9FC671DCAE8BB005E6D2C /* AddItemRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D9FC5B1DCAE8BB005E6D2C /* AddItemRouter.swift */; };
 		78D9FC681DCAE8BB005E6D2C /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D9FC5C1DCAE8BB005E6D2C /* AddItemViewController.swift */; };
 		78D9FC691DCAE8BB005E6D2C /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D9FC5C1DCAE8BB005E6D2C /* AddItemViewController.swift */; };
-		78D9FC6A1DCAE8BB005E6D2C /* AddItemWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D9FC5D1DCAE8BB005E6D2C /* AddItemWorker.swift */; };
-		78D9FC6B1DCAE8BB005E6D2C /* AddItemWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D9FC5D1DCAE8BB005E6D2C /* AddItemWorker.swift */; };
 		78F463FF1DC3FA5F00DC49E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F463FE1DC3FA5F00DC49E2 /* AppDelegate.swift */; };
 		78F464041DC3FA5F00DC49E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F464021DC3FA5F00DC49E2 /* Main.storyboard */; };
 		78F464061DC3FA5F00DC49E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78F464051DC3FA5F00DC49E2 /* Assets.xcassets */; };
@@ -38,14 +42,12 @@
 		78F464321DC3FC6900DC49E2 /* PurchaseListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4642E1DC3FC6900DC49E2 /* PurchaseListInteractorTests.swift */; };
 		78F464331DC3FC6900DC49E2 /* PurchaseListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4642F1DC3FC6900DC49E2 /* PurchaseListPresenterTests.swift */; };
 		78F464341DC3FC6900DC49E2 /* PurchaseListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F464301DC3FC6900DC49E2 /* PurchaseListViewControllerTests.swift */; };
-		78F464351DC3FC6900DC49E2 /* PurchaseListWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F464311DC3FC6900DC49E2 /* PurchaseListWorkerTests.swift */; };
 		78F4643D1DC3FEB700DC49E2 /* PurchaseListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F464201DC3FC5300DC49E2 /* PurchaseListConfigurator.swift */; };
 		78F4643E1DC3FEB700DC49E2 /* PurchaseListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F464211DC3FC5300DC49E2 /* PurchaseListInteractor.swift */; };
 		78F4643F1DC3FEB700DC49E2 /* PurchaseListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F464221DC3FC5300DC49E2 /* PurchaseListModels.swift */; };
 		78F464401DC3FEB700DC49E2 /* PurchaseListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F464231DC3FC5300DC49E2 /* PurchaseListPresenter.swift */; };
 		78F464411DC3FEB700DC49E2 /* PurchaseListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F464241DC3FC5300DC49E2 /* PurchaseListRouter.swift */; };
 		78F464421DC3FEB700DC49E2 /* PurchaseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F464251DC3FC5300DC49E2 /* PurchaseListViewController.swift */; };
-		78F464431DC3FEB700DC49E2 /* PurchaseListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F464261DC3FC5300DC49E2 /* PurchaseListWorker.swift */; };
 		78F464441DC3FF2400DC49E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F464021DC3FA5F00DC49E2 /* Main.storyboard */; };
 		78F464451DC3FF3D00DC49E2 /* PurchaseListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F464201DC3FC5300DC49E2 /* PurchaseListConfigurator.swift */; };
 		78F464461DC3FF3D00DC49E2 /* PurchaseListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F464211DC3FC5300DC49E2 /* PurchaseListInteractor.swift */; };
@@ -53,7 +55,6 @@
 		78F464481DC3FF3D00DC49E2 /* PurchaseListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F464231DC3FC5300DC49E2 /* PurchaseListPresenter.swift */; };
 		78F464491DC3FF3D00DC49E2 /* PurchaseListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F464241DC3FC5300DC49E2 /* PurchaseListRouter.swift */; };
 		78F4644A1DC3FF3D00DC49E2 /* PurchaseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F464251DC3FC5300DC49E2 /* PurchaseListViewController.swift */; };
-		78F4644B1DC3FF3D00DC49E2 /* PurchaseListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F464261DC3FC5300DC49E2 /* PurchaseListWorker.swift */; };
 		78F4644E1DC4054300DC49E2 /* RealmItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F4644D1DC4054300DC49E2 /* RealmItem.swift */; };
 		81E49DFA9B3F822876D73565 /* Pods_PurchaseList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C38A0494D29247D2221DFF73 /* Pods_PurchaseList.framework */; };
 		E12B7C26E76D655A13FD223C /* Pods_PurchaseListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB8C109ABD262937B9A90A27 /* Pods_PurchaseListTests.framework */; };
@@ -78,13 +79,17 @@
 		7842F3071DC8FD6D00ECDC50 /* ItemRealmStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemRealmStore.swift; path = RealmStore/ItemRealmStore.swift; sourceTree = "<group>"; };
 		7842F30A1DC9299A00ECDC50 /* ItemMemoryStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemMemoryStore.swift; path = MemoryStore/ItemMemoryStore.swift; sourceTree = "<group>"; };
 		7842F3101DCA0F9000ECDC50 /* ItemWorkerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemWorkerTests.swift; sourceTree = "<group>"; };
+		789DF2211DCBC6340081115D /* AddItemInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddItemInteractorTests.swift; path = AddItem/AddItemInteractorTests.swift; sourceTree = "<group>"; };
+		789DF2221DCBC6340081115D /* AddItemPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddItemPresenterTests.swift; path = AddItem/AddItemPresenterTests.swift; sourceTree = "<group>"; };
+		789DF2231DCBC6340081115D /* AddItemViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddItemViewControllerTests.swift; path = AddItem/AddItemViewControllerTests.swift; sourceTree = "<group>"; };
+		789DF2241DCBC6340081115D /* AddItemWorkerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddItemWorkerTests.swift; path = AddItem/AddItemWorkerTests.swift; sourceTree = "<group>"; };
+		789DF2291DCBD2070081115D /* AddItemWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddItemWorker.swift; path = Scenes/AddItem/AddItemWorker.swift; sourceTree = "<group>"; };
 		78D9FC571DCAE8BB005E6D2C /* AddItemConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddItemConfigurator.swift; path = Scenes/AddItem/AddItemConfigurator.swift; sourceTree = "<group>"; };
 		78D9FC581DCAE8BB005E6D2C /* AddItemInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddItemInteractor.swift; path = Scenes/AddItem/AddItemInteractor.swift; sourceTree = "<group>"; };
 		78D9FC591DCAE8BB005E6D2C /* AddItemModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddItemModels.swift; path = Scenes/AddItem/AddItemModels.swift; sourceTree = "<group>"; };
 		78D9FC5A1DCAE8BB005E6D2C /* AddItemPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddItemPresenter.swift; path = Scenes/AddItem/AddItemPresenter.swift; sourceTree = "<group>"; };
 		78D9FC5B1DCAE8BB005E6D2C /* AddItemRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddItemRouter.swift; path = Scenes/AddItem/AddItemRouter.swift; sourceTree = "<group>"; };
 		78D9FC5C1DCAE8BB005E6D2C /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddItemViewController.swift; path = Scenes/AddItem/AddItemViewController.swift; sourceTree = "<group>"; };
-		78D9FC5D1DCAE8BB005E6D2C /* AddItemWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddItemWorker.swift; path = Scenes/AddItem/AddItemWorker.swift; sourceTree = "<group>"; };
 		78F463FB1DC3FA5F00DC49E2 /* PurchaseList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PurchaseList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78F463FE1DC3FA5F00DC49E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78F464031DC3FA5F00DC49E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -100,11 +105,9 @@
 		78F464231DC3FC5300DC49E2 /* PurchaseListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PurchaseListPresenter.swift; path = Scenes/PurchaseList/PurchaseListPresenter.swift; sourceTree = "<group>"; };
 		78F464241DC3FC5300DC49E2 /* PurchaseListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PurchaseListRouter.swift; path = Scenes/PurchaseList/PurchaseListRouter.swift; sourceTree = "<group>"; };
 		78F464251DC3FC5300DC49E2 /* PurchaseListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PurchaseListViewController.swift; path = Scenes/PurchaseList/PurchaseListViewController.swift; sourceTree = "<group>"; };
-		78F464261DC3FC5300DC49E2 /* PurchaseListWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PurchaseListWorker.swift; path = Scenes/PurchaseList/PurchaseListWorker.swift; sourceTree = "<group>"; };
 		78F4642E1DC3FC6900DC49E2 /* PurchaseListInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PurchaseListInteractorTests.swift; path = PurchaseList/PurchaseListInteractorTests.swift; sourceTree = "<group>"; };
 		78F4642F1DC3FC6900DC49E2 /* PurchaseListPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PurchaseListPresenterTests.swift; path = PurchaseList/PurchaseListPresenterTests.swift; sourceTree = "<group>"; };
 		78F464301DC3FC6900DC49E2 /* PurchaseListViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PurchaseListViewControllerTests.swift; path = PurchaseList/PurchaseListViewControllerTests.swift; sourceTree = "<group>"; };
-		78F464311DC3FC6900DC49E2 /* PurchaseListWorkerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PurchaseListWorkerTests.swift; path = PurchaseList/PurchaseListWorkerTests.swift; sourceTree = "<group>"; };
 		78F4644D1DC4054300DC49E2 /* RealmItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RealmItem.swift; path = RealmModels/RealmItem.swift; sourceTree = "<group>"; };
 		C38A0494D29247D2221DFF73 /* Pods_PurchaseList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PurchaseList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3BB7F3F5FC3762FCFD5DD16 /* Pods-PurchaseListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PurchaseListTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PurchaseListTests/Pods-PurchaseListTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -178,7 +181,6 @@
 				78F4642E1DC3FC6900DC49E2 /* PurchaseListInteractorTests.swift */,
 				78F4642F1DC3FC6900DC49E2 /* PurchaseListPresenterTests.swift */,
 				78F464301DC3FC6900DC49E2 /* PurchaseListViewControllerTests.swift */,
-				78F464311DC3FC6900DC49E2 /* PurchaseListWorkerTests.swift */,
 			);
 			name = PurchaseList;
 			sourceTree = "<group>";
@@ -191,6 +193,17 @@
 			name = Workers;
 			sourceTree = "<group>";
 		};
+		789DF21E1DCBC42E0081115D /* AddItem */ = {
+			isa = PBXGroup;
+			children = (
+				789DF2211DCBC6340081115D /* AddItemInteractorTests.swift */,
+				789DF2221DCBC6340081115D /* AddItemPresenterTests.swift */,
+				789DF2231DCBC6340081115D /* AddItemViewControllerTests.swift */,
+				789DF2241DCBC6340081115D /* AddItemWorkerTests.swift */,
+			);
+			name = AddItem;
+			sourceTree = "<group>";
+		};
 		78D9FC561DCAE890005E6D2C /* AddItem */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,7 +213,7 @@
 				78D9FC5A1DCAE8BB005E6D2C /* AddItemPresenter.swift */,
 				78D9FC5B1DCAE8BB005E6D2C /* AddItemRouter.swift */,
 				78D9FC5C1DCAE8BB005E6D2C /* AddItemViewController.swift */,
-				78D9FC5D1DCAE8BB005E6D2C /* AddItemWorker.swift */,
+				789DF2291DCBD2070081115D /* AddItemWorker.swift */,
 			);
 			name = AddItem;
 			sourceTree = "<group>";
@@ -247,6 +260,7 @@
 		78F464121DC3FA6000DC49E2 /* PurchaseListTests */ = {
 			isa = PBXGroup;
 			children = (
+				789DF21E1DCBC42E0081115D /* AddItem */,
 				7842F30D1DCA0F4000ECDC50 /* Workers */,
 				7842F30C1DCA0EDA00ECDC50 /* PurchaseList */,
 				78F464131DC3FA6000DC49E2 /* PurchaseListTests.swift */,
@@ -273,7 +287,6 @@
 				78F464231DC3FC5300DC49E2 /* PurchaseListPresenter.swift */,
 				78F464241DC3FC5300DC49E2 /* PurchaseListRouter.swift */,
 				78F464251DC3FC5300DC49E2 /* PurchaseListViewController.swift */,
-				78F464261DC3FC5300DC49E2 /* PurchaseListWorker.swift */,
 			);
 			name = PurchaseList;
 			sourceTree = "<group>";
@@ -519,8 +532,8 @@
 				78D9FC681DCAE8BB005E6D2C /* AddItemViewController.swift in Sources */,
 				78D9FC601DCAE8BB005E6D2C /* AddItemInteractor.swift in Sources */,
 				78F464481DC3FF3D00DC49E2 /* PurchaseListPresenter.swift in Sources */,
+				789DF22A1DCBD2070081115D /* AddItemWorker.swift in Sources */,
 				78D9FC641DCAE8BB005E6D2C /* AddItemPresenter.swift in Sources */,
-				78D9FC6A1DCAE8BB005E6D2C /* AddItemWorker.swift in Sources */,
 				78F464471DC3FF3D00DC49E2 /* PurchaseListModels.swift in Sources */,
 				781946351DC81F0100CA0889 /* Realm+Mapper.swift in Sources */,
 				7842F3081DC8FD6D00ECDC50 /* ItemRealmStore.swift in Sources */,
@@ -530,7 +543,6 @@
 				78D9FC5E1DCAE8BB005E6D2C /* AddItemConfigurator.swift in Sources */,
 				78D9FC621DCAE8BB005E6D2C /* AddItemModels.swift in Sources */,
 				78F464451DC3FF3D00DC49E2 /* PurchaseListConfigurator.swift in Sources */,
-				78F4644B1DC3FF3D00DC49E2 /* PurchaseListWorker.swift in Sources */,
 				78D9FC661DCAE8BB005E6D2C /* AddItemRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -541,21 +553,23 @@
 			files = (
 				78F464141DC3FA6000DC49E2 /* PurchaseListTests.swift in Sources */,
 				78F464421DC3FEB700DC49E2 /* PurchaseListViewController.swift in Sources */,
+				789DF22B1DCBD4430081115D /* AddItemWorker.swift in Sources */,
 				78F464341DC3FC6900DC49E2 /* PurchaseListViewControllerTests.swift in Sources */,
 				78F464331DC3FC6900DC49E2 /* PurchaseListPresenterTests.swift in Sources */,
+				789DF2261DCBC6340081115D /* AddItemPresenterTests.swift in Sources */,
 				7842F3151DCA139300ECDC50 /* Item.swift in Sources */,
 				78D9FC651DCAE8BB005E6D2C /* AddItemPresenter.swift in Sources */,
 				78F464411DC3FEB700DC49E2 /* PurchaseListRouter.swift in Sources */,
 				78F464321DC3FC6900DC49E2 /* PurchaseListInteractorTests.swift in Sources */,
-				78F464351DC3FC6900DC49E2 /* PurchaseListWorkerTests.swift in Sources */,
 				78D9FC5F1DCAE8BB005E6D2C /* AddItemConfigurator.swift in Sources */,
 				78F4643D1DC3FEB700DC49E2 /* PurchaseListConfigurator.swift in Sources */,
-				78F464431DC3FEB700DC49E2 /* PurchaseListWorker.swift in Sources */,
 				7842F3121DCA0FF600ECDC50 /* ItemMemoryStore.swift in Sources */,
+				789DF2281DCBC6340081115D /* AddItemWorkerTests.swift in Sources */,
+				789DF2251DCBC6340081115D /* AddItemInteractorTests.swift in Sources */,
 				78F4643F1DC3FEB700DC49E2 /* PurchaseListModels.swift in Sources */,
 				78D9FC631DCAE8BB005E6D2C /* AddItemModels.swift in Sources */,
 				78F464401DC3FEB700DC49E2 /* PurchaseListPresenter.swift in Sources */,
-				78D9FC6B1DCAE8BB005E6D2C /* AddItemWorker.swift in Sources */,
+				789DF2271DCBC6340081115D /* AddItemViewControllerTests.swift in Sources */,
 				7842F3131DCA0FF900ECDC50 /* ItemWorker.swift in Sources */,
 				7842F3111DCA0F9000ECDC50 /* ItemWorkerTests.swift in Sources */,
 				78D9FC671DCAE8BB005E6D2C /* AddItemRouter.swift in Sources */,

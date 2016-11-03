@@ -12,11 +12,12 @@
 import UIKit
 
 protocol AddItemPresenterInput{
-    func presentSomething(response: AddItem.Response)
+    func presentInsertItem(response: AddItem.Insert.Response)
 }
 
 protocol AddItemPresenterOutput: class{
-    func displaySomething(viewModel: AddItem.ViewModel)
+    func displayInsertItemError(viewModel: AddItem.Insert.ViewModel)
+    func displayInsertItemSuccessfully(viewModel: AddItem.Insert.ViewModel)
 }
 
 class AddItemPresenter: AddItemPresenterInput{
@@ -24,10 +25,25 @@ class AddItemPresenter: AddItemPresenterInput{
     
     // MARK: Presentation logic
     
-    func presentSomething(response: AddItem.Response){
+    func presentInsertItem(response: AddItem.Insert.Response){
         // NOTE: Format the response from the Interactor and pass the result back to the View Controller
-        
-        let viewModel = AddItem.ViewModel()
-        output.displaySomething(viewModel: viewModel)
+        if response.result == .NoErrors {
+            let alertController = UIAlertController(title: nil, message: "Item saved successfully", preferredStyle: UIAlertControllerStyle.alert)
+            output.displayInsertItemSuccessfully(viewModel: AddItem.Insert.ViewModel(alert: alertController))
+        }
+        else{
+            let message = createAlertViewForErrors(errorType: response.result)
+            let alertController = UIAlertController(title: nil, message: message, preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            output.displayInsertItemError(viewModel: AddItem.Insert.ViewModel(alert: alertController))
+        }
+    }
+    
+    
+    func createAlertViewForErrors(errorType: AddItemResult) -> String{
+        if errorType == .OneOrMoreParametersAreNil{
+            return "Please check that all parameters aren't empty"
+        }
+        return "The quantity must be a valid number"
     }
 }
